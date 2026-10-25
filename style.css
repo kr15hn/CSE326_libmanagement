@@ -2,16 +2,41 @@ body {
   background-color:#f7f4ee;
   color:#333;
   font-family:Arial, sans-serif;
+  max-width:900px;
+  margin:0 auto;
+  padding:16px;
 }
-h1 { color:#1f3a5f; }
-h2 { color:#1f3a5f; }
+h1 {
+  color:#1f3a5f;
+  border-bottom:2px solid #1f3a5f;
+  padding-bottom:6px;
+}
+h2 {
+  color:#1f3a5f;
+  margin-top:22px;
+}
 nav a { color:#1f3a5f; }
-th { background-color:#1f3a5f; color:white; }
-td { padding:6px; }
-input { padding:4px; }
-select { padding:4px; }
+nav a:hover { color:#33587f; }
+a { color:#1f3a5f; }
+th {
+  background-color:#1f3a5f;
+  color:white;
+  padding:8px 12px;
+}
+td { padding:8px 12px; }
+.free { background-color:#e3f0e3; color:#2d5a2d; }
+.taken { background-color:#f8dada; color:#8a3030; }
+input { padding:5px; }
+select { padding:5px; }
 input[type=submit] {
   background-color:#1f3a5f;
   color:white;
-  padding:6px;
+  border:none;
+  cursor:pointer;
+}
+input[type=submit]:hover { background-color:#33587f; }
+input:focus, select:focus { outline:2px solid #33587f; }
+
+@media (max-width:600px) {
+  body { padding:8px; }
 }
