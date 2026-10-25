@@ -1,4 +1,4 @@
-// trying out the string methods
+// little booking slip test
 let name = prompt("enter your name");
 let seat = prompt("enter seat code");
 
@@ -11,7 +11,9 @@ if (name == null || name == "" || seat == null || seat == "") {
 
   if (seat < "A-01" || seat > "C-03") {
     alert("seat code should be between A-01 and C-03");
+  } else if (confirm("book " + seat + " for " + name + "?")) {
+    alert("booking done: " + name + " - " + seat);
   } else {
-    alert(name + ", your seat is " + seat);
+    alert("booking cancelled");
   }
 }
