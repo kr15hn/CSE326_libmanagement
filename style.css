@@ -1,0 +1,17 @@
+body {
+  background-color:#f7f4ee;
+  color:#333;
+  font-family:Arial, sans-serif;
+}
+h1 { color:#1f3a5f; }
+h2 { color:#1f3a5f; }
+nav a { color:#1f3a5f; }
+th { background-color:#1f3a5f; color:white; }
+td { padding:6px; }
+input { padding:4px; }
+select { padding:4px; }
+input[type=submit] {
+  background-color:#1f3a5f;
+  color:white;
+  padding:6px;
+}
