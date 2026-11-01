@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Seat Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Library Seat and Resource Booking System</h1>
+<p>Available seats in library.</p>
+
+<nav>
+<a href="#seats">Seats</a> | <a href="#book">Book</a> | <a href="index.html">Login</a> | <a href="status.html">Status</a> | <a href="about.html">About</a>
+</nav>
+
+<h2 id="seats">Seat Map</h2>
+
+<table border="1">
+  <tr>
+    <th>Row</th> <th>Seat 1</th> <th>Seat 2</th> <th>Seat 3</th>
+  </tr>
+  <tr>
+    <td>A</td> <td class="free">A-01 free</td> <td class="free">A-02 free</td> <td class="taken">A-03 taken</td>
+  </tr>
+  <tr>
+    <td>B</td> <td class="free">B-01 free</td> <td class="taken">B-02 taken</td> <td class="free">B-03 free</td>
+  </tr>
+  <tr>
+    <td>C</td> <td class="free">C-01 free</td> <td class="free">C-02 free</td> <td class="free">C-03 free</td>
+  </tr>
+</table>
+
+<h2 id="book">Book a seat</h2>
+<form action="#" method="post">
+<p>Name : <input type="text" name="sname" placeholder="your name"></p>
+<p>Roll no : <input type="text" name="roll"></p>
+<p>Seat code : <input type="text" name="seat" placeholder="A-01"></p>
+<p>Date : <input type="date" name="date"></p>
+<p>Slot :
+<select name="slot">
+  <option>9am - 12pm</option>
+  <option>12pm - 3pm</option>
+  <option>3pm - 6pm</option>
+</select>
+</p>
+<p><input type="submit" value="Book"></p>
+</form>
+
+<h2 id="resources">Other resources</h2>
+<ul>
+<li>Reading Room 1 - free</li>
+<li>Laptop no 3 - taken</li>
+<li>Discussion Room - free</li>
+</ul>
+
+<h2 id="rules">Rules</h2>
+<ul>
+<li>one seat per student</li>
+<li>seat gets released after the slot is over</li>
+<li>bring your id card</li>
+</ul>
+
+<p>CA1 - CSE326</p>
+
+<script src="script.js"></script>
+</body>
+</html>
