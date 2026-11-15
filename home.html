@@ -7,10 +7,10 @@
 <body>
 
 <h1>Library Seat and Resource Booking System</h1>
-<p>Available seats in library.</p>
+<p>Available seats in library. Click a free seat to select it.</p>
 
 <nav>
-<a href="#seats">Seats</a> | <a href="#book">Book</a> | <a href="index.html">Login</a> | <a href="status.html">Status</a> | <a href="about.html">About</a>
+<a href="#seats">Seats</a> | <a href="#book">Book</a> | <a href="#resources">Resources</a> | <a href="status.html">Status</a> | <a href="about.html">About</a> | <a href="index.html">Logout</a>
 </nav>
 
 <h2 id="seats">Seat Map</h2>
@@ -20,31 +20,33 @@
     <th>Row</th> <th>Seat 1</th> <th>Seat 2</th> <th>Seat 3</th>
   </tr>
   <tr>
-    <td>A</td> <td class="free">A-01 free</td> <td class="free">A-02 free</td> <td class="taken">A-03 taken</td>
+    <td>A</td> <td id="A-01" class="free" onclick="pickSeat('A-01')">A-01 free</td> <td id="A-02" class="free" onclick="pickSeat('A-02')">A-02 free</td> <td id="A-03" class="taken" onclick="pickSeat('A-03')">A-03 taken</td>
   </tr>
   <tr>
-    <td>B</td> <td class="free">B-01 free</td> <td class="taken">B-02 taken</td> <td class="free">B-03 free</td>
+    <td>B</td> <td id="B-01" class="free" onclick="pickSeat('B-01')">B-01 free</td> <td id="B-02" class="taken" onclick="pickSeat('B-02')">B-02 taken</td> <td id="B-03" class="free" onclick="pickSeat('B-03')">B-03 free</td>
   </tr>
   <tr>
-    <td>C</td> <td class="free">C-01 free</td> <td class="free">C-02 free</td> <td class="free">C-03 free</td>
+    <td>C</td> <td id="C-01" class="free" onclick="pickSeat('C-01')">C-01 free</td> <td id="C-02" class="free" onclick="pickSeat('C-02')">C-02 free</td> <td id="C-03" class="free" onclick="pickSeat('C-03')">C-03 free</td>
   </tr>
 </table>
 
 <h2 id="book">Book a seat</h2>
-<form action="#" method="post">
-<p>Name : <input type="text" name="sname" placeholder="your name"></p>
-<p>Roll no : <input type="text" name="roll"></p>
-<p>Seat code : <input type="text" name="seat" placeholder="A-01"></p>
-<p>Date : <input type="date" name="date"></p>
+<form>
+<p>Name : <input type="text" id="sname" placeholder="your name"></p>
+<p>Roll no : <input type="text" id="roll"></p>
+<p>Seat code : <input type="text" id="seat" placeholder="A-01"></p>
+<p>Date : <input type="date" id="date"></p>
 <p>Slot :
-<select name="slot">
+<select id="slot">
   <option>9am - 12pm</option>
   <option>12pm - 3pm</option>
   <option>3pm - 6pm</option>
 </select>
 </p>
-<p><input type="submit" value="Book"></p>
+<p><input type="button" value="Book" onclick="bookSeat()"></p>
 </form>
+
+<p id="slip"></p>
 
 <h2 id="resources">Other resources</h2>
 <ul>
@@ -60,7 +62,7 @@
 <li>bring your id card</li>
 </ul>
 
-<p>CA1 - CSE326</p>
+<p>CA2 - CSE326</p>
 
 <script src="script.js"></script>
 </body>

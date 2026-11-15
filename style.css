@@ -28,13 +28,13 @@ td { padding:8px 12px; }
 .taken { background-color:#f8dada; color:#8a3030; }
 input { padding:5px; }
 select { padding:5px; }
-input[type=submit] {
+input[type=submit], input[type=button] {
   background-color:#1f3a5f;
   color:white;
   border:none;
   cursor:pointer;
 }
-input[type=submit]:hover { background-color:#33587f; }
+input[type=submit]:hover, input[type=button]:hover { background-color:#33587f; }
 input:focus, select:focus { outline:2px solid #33587f; }
 
 @media (max-width:600px) {
